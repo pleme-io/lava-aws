@@ -6,7 +6,7 @@ license = "MIT"
 name = "lava-aws"
 readme = "README.md"
 repository = "https://github.com/pleme-io/lava-aws"
-version = "0.1.0"
+version = "0.1.1"
 
 [lints.clippy]
 pedantic = "warn"
