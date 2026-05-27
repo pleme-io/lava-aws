@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "workspace": {
+    "root": "/Users/drzzln/code/github/pleme-io/lava-aws",
+    "members": [
+      {
+        "name": "lava-aws",
+        "relative_path": "."
+      }
+    ]
+  },
+  "crates": {
+    "lava-aws-0.1.1": {
+      "name": "lava-aws",
+      "version": "0.1.1",
+      "edition": "2024",
+      "source": {
+        "kind": "path",
+        "relative_path": "."
+      },
+      "features": [],
+      "proc_macro": false,
+      "build_script": null,
+      "binaries": [],
+      "lib_target": {
+        "name": "lava_aws",
+        "path": "src/lib.rs"
+      },
+      "dependencies": [],
+      "runtime_dependencies": [],
+      "build_dependencies": [],
+      "crate_renames": {}
+    }
+  },
+  "root_crate": "lava-aws-0.1.1",
+  "workspace_members": [
+    "lava-aws-0.1.1"
+  ],
+  "flake_metadata": {
+    "lava-aws": {
+      "default_bin": null,
+      "repo": "pleme-io/lava-aws"
+    }
+  }
+}
