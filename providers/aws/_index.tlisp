@@ -4,11 +4,15 @@
 (deflava-provider
   :aws
   :resources
-  (:aws-eip
+  (:aws-acm-certificate
+    :aws-acm-certificate-validation
+    :aws-cloudfront-distribution
+    :aws-eip
     :aws-iam-role
     :aws-instance
     :aws-internet-gateway
     :aws-lambda-function
+    :aws-route53-record
     :aws-route53-zone
     :aws-s3-bucket
     :aws-security-group

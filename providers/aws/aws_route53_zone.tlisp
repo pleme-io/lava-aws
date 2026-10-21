@@ -3,17 +3,46 @@
 
 (deflava-resource
   :aws-route53-zone
-  :doc
-  "Provides a Route 53 Hosted Zone."
   :attributes
-  ((:comment :type string :optional #t :doc "Comment.")
-    (:force-destroy :type bool :optional #t :doc "Force destroy.")
-    (:id :type string :computed #t :doc "Zone ID.")
-    (:name :type string :required #t :doc "Zone name.")
+  ((:arn :type string :computed #t)
+    (:comment :type string :optional #t)
+    (:delegation-set-id :type string :optional #t)
+    (:enable-accelerated-recovery :type bool :optional #t :computed #t)
+    (:force-destroy :type bool :optional #t)
+    (:id :type string :optional #t :computed #t)
+    (:name :type string :required #t)
+    (:name-servers
+      :type
+      (list string)
+      :computed
+      #t)
+    (:primary-name-server :type string :computed #t)
     (:tags
       :type
       (map string)
       :optional
+      #t)
+    (:tags-all
+      :type
+      (map string)
+      :optional
       #t
-      :doc
-      "Tag map.")))
+      :computed
+      #t)
+    (:zone-id :type string :computed #t))
+  :nested-blocks
+  ((:timeouts
+      :mode
+      single
+      :block
+      (:attributes
+        ((:create :type string :optional #t)
+          (:delete :type string :optional #t)
+          (:update :type string :optional #t))))
+    (:vpc
+      :mode
+      set
+      :block
+      (:attributes
+        ((:vpc-id :type string :required #t)
+          (:vpc-region :type string :optional #t :computed #t))))))
