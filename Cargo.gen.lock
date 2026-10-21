@@ -1,9 +1,12 @@
 {
-  "schema_version": 1,
-  "cargo_lock_sha256": "0ec9d016748b9623c6d7dd245acb20e50b1144bb7c2605229cdd28dad5bef51a",
+  "schema_version": 2,
+  "cargo_lock_sha256": "d7116aba0bced1a4eb5a942bddbdc1ae26038386f30de4c7b201fa2ffd4c233b",
+  "manifest_sha256": {
+    "Cargo.toml": "11db8a770b43536d03dbf2b650088be61f9753bdeeafd56cf7a6792c6e70ed96"
+  },
   "target_resolves": {
     "base": {
-      "lava-aws-0.1.1": {
+      "lava-aws-0.1.2": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
@@ -11,6 +14,12 @@
     },
     "targets": {
       "aarch64-apple-darwin": {
+        "overrides": {}
+      },
+      "aarch64-unknown-linux-gnu": {
+        "overrides": {}
+      },
+      "aarch64-unknown-linux-musl": {
         "overrides": {}
       },
       "x86_64-apple-darwin": {
@@ -21,17 +30,11 @@
       },
       "x86_64-unknown-linux-musl": {
         "overrides": {}
-      },
-      "aarch64-unknown-linux-gnu": {
-        "overrides": {}
-      },
-      "aarch64-unknown-linux-musl": {
-        "overrides": {}
       }
     }
   },
   "per_crate": {
-    "lava-aws-0.1.1": {
+    "lava-aws-0.1.2": {
       "edition": "2024",
       "lib_target": {
         "name": "lava_aws",
