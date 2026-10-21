@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "cargo_lock_sha256": "d7116aba0bced1a4eb5a942bddbdc1ae26038386f30de4c7b201fa2ffd4c233b",
+  "cargo_lock_sha256": "94c2de8f88c8891f386226e28aac5790ba64e659c4f4bb68de4531e46e5edb04",
   "manifest_sha256": {
-    "Cargo.toml": "11db8a770b43536d03dbf2b650088be61f9753bdeeafd56cf7a6792c6e70ed96"
+    "Cargo.toml": "f118a60e3e4a47cb0de9d523431a338c5b52b86542359db58276da2289020c9b"
   },
   "target_resolves": {
     "base": {
-      "lava-aws-0.1.2": {
+      "lava-aws-0.1.3": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
@@ -34,7 +34,7 @@
     }
   },
   "per_crate": {
-    "lava-aws-0.1.2": {
+    "lava-aws-0.1.3": {
       "edition": "2024",
       "lib_target": {
         "name": "lava_aws",
