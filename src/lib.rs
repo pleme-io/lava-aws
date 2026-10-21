@@ -19,6 +19,18 @@ mod tests {
     }
 
     #[test]
+    fn the_manifest_readme_exists() {
+        let root = Path::new(env!("CARGO_MANIFEST_DIR"));
+        let manifest = std::fs::read_to_string(root.join("Cargo.toml")).expect("manifest");
+        let readme = manifest
+            .lines()
+            .find_map(|l| l.strip_prefix("readme = \""))
+            .and_then(|r| r.strip_suffix('"'))
+            .expect("readme key");
+        assert!(root.join(readme).is_file(), "the registry release needs {readme}");
+    }
+
+    #[test]
     fn smoke() {
         assert_eq!(2 + 2, 4);
     }
